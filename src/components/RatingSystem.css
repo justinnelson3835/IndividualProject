@@ -1,0 +1,11 @@
+.rating-icon {
+    font-size: 24px;
+    margin: 5px;
+    cursor: pointer;
+    color: #999;
+  }
+  
+  .rating-icon.active {
+    color: #ff6600; /* Change this color for the active rating */
+  }
+  
