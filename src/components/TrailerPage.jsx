@@ -2,7 +2,7 @@ import {useEffect, useState} from "react"
 import axios from 'axios'
 import Movie from "./MovieList.jsx"
 import Youtube from 'react-youtube'
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Form, FormControl, Button } from "react-bootstrap"
 import RatingSystem from "./RatingSystem.jsx"
 import NavBar from "./NavBar.jsx"
 
@@ -132,16 +132,31 @@ function TrailerPage() {
                         <Row>
                     {<RatingSystem />}
 
-                    <form className="form" onSubmit={fetchMovies}>
-                    <input className="search" type="text" id="search"
-                           onInput={(event) => setSearchKey(event.target.value)}/>
-                    <button className="submit-search" type="submit"><i className="fa fa-search"></i></button>
-                </form>
                         </Row>
+                        <Row> 
+                            <Col>  
+                                <Form class="form-inline" onSubmit={fetchMovies}>
+                                    <FormControl
+                                    type="text"
+                                    id="search"
+                                    className="search"
+                                    value={searchKey}
+                                    onChange={(event) => setSearchKey(event.target.value)}
+                                    placeholder="Search"
+                                    />
+                                
+                                    
+                                    <Button type="submit" class="btn btn-outline-dark">
+                                    Submit
+                                    </Button>
+                                </Form>
+                            </Col> 
+                        </Row> 
+
                     </Container>
-                    <Container fluid>
+                    <div class="row row-cols-4 row-cols-md-4">
                         {renderMovies()}
-                    </Container>
+                    </div>
                 </main>
                 : 'Sorry, no movies found'}
         </div>
