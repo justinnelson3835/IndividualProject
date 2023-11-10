@@ -126,7 +126,7 @@ function Trailers() {
                                     
                                 </div>
                             }
-                            {<RatingSystem />}
+                            
                         </div>
                         : null}
                     <Container fluid>
