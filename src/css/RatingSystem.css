@@ -8,4 +8,8 @@
   .rating-icon.active {
     color: #ff6600; /* Change this color for the active rating */
   }
+
+  .rating-icon:hover {
+    color: #ff6600; /* Change this color for the active rating */
+  }
   

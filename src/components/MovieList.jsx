@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody } from 'react-bootstrap';
+import { Card, CardBody, CardImg } from 'react-bootstrap';
 
 
 const MovieList = ({movie, selectMovie}) => {
@@ -8,13 +8,13 @@ const MovieList = ({movie, selectMovie}) => {
     return (
         <Card onClick={() => selectMovie(movie)}>
             
-            <Card.Img src={movie.poster_path ? IMAGE_PATH + movie.poster_path : ''} alt={movie.title} />
+            <CardImg src={movie.poster_path ? IMAGE_PATH + movie.poster_path : ''} alt={movie.title} />
                
-                <Card.Body>
+                <CardBody>
 
                     <Card.Title>{movie.title}</Card.Title>
                     
-                </Card.Body>
+                </CardBody>
             
         </Card>
         

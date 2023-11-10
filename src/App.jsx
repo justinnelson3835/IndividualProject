@@ -1,11 +1,11 @@
 import './App.css';
 import RatingSystem from './components/RatingSystem';
-import TrailerPage from './components/TrailerPage';
+import Trailers from './components/Trailers';
 
 function App() {
   return (
     <div className="App">
-      {<TrailerPage />}
+      {<Trailers />}
      
     </div>
   );

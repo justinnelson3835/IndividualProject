@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumpsterFire } from '@fortawesome/free-solid-svg-icons';
-import './RatingSystem.css';
+import '../css/RatingSystem.css';
 
 const RatingSystem = () => {
   const [rating, setRating] = useState(0);

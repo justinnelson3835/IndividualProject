@@ -6,7 +6,8 @@ import { Container, Row, Col, Form, FormControl, Button } from "react-bootstrap"
 import RatingSystem from "./RatingSystem.jsx"
 import NavBar from "./NavBar.jsx"
 
-function TrailerPage() {
+
+function Trailers() {
     const MOVIE_API = "https://api.themoviedb.org/3/"
     const SEARCH_API = MOVIE_API + "search/movie"
     const DISCOVER_API = MOVIE_API + "discover/movie"
@@ -163,4 +164,4 @@ function TrailerPage() {
     );
 }
 
-export default TrailerPage;
+export default Trailers;
