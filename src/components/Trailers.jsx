@@ -4,7 +4,7 @@ import Movie from "./MovieList.jsx"
 import Youtube from 'react-youtube'
 import { Container, Row, Col, Form, FormControl, Button } from "react-bootstrap"
 import RatingSystem from "./RatingSystem.jsx"
-import NavBar from "./NavBar.jsx"
+
 
 
 function Trailers() {
@@ -81,7 +81,7 @@ function Trailers() {
 
     return (
         <div className="App">
-            {<NavBar />}
+            
             {movies.length ?
                 <main>
                     {movie ?

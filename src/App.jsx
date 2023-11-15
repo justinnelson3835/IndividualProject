@@ -1,14 +1,46 @@
 import './App.css';
-import RatingSystem from './components/RatingSystem';
-import Trailers from './components/Trailers';
+import axios from 'axios';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import LogoutButton from './components/LogoutButton.jsx';
 
-function App() {
+export default function App() {
+  const navigate = useNavigate();
+
+  const handleLogout = async (e) => {
+    e.preventDefault();
+    const res = await axios.post('/api/logout');
+    if (res.data.success) {
+      navigate('/');
+    }
+  };
+
   return (
-    <div className="App">
-      {<Trailers />}
-     
-    </div>
+    <>
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/movies">All movies</NavLink>
+          </li>
+          <li>
+            <NavLink to="/login">Log in</NavLink>
+          </li>
+          <li>
+            <NavLink to="/dashboard">Your ratings</NavLink>
+          </li>
+          <li>
+            <LogoutButton onLogout={handleLogout} />
+          </li>
+        </ul>
+      </nav>
+
+      <hr />
+
+      <main>
+        <Outlet />
+      </main>
+    </>
   );
 }
-
-export default App;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardBody, CardImg } from 'react-bootstrap';
-
+import { useLoaderData } from 'react-router-dom';
 
 const MovieList = ({movie, selectMovie}) => {
     const IMAGE_PATH = "https://image.tmdb.org/t/p/w342"
